@@ -2,7 +2,8 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,textarea,p,th,td{margin:
 ol,ul{list-style: none;}
 fieldset,img {border:0;}
 h1,h2,h3,h4,h5,h6,label{font-size:100%;font-weight:normal;}
-a{text-decoration: none;
+a,a:hover{
+    text-decoration: none;
 -webkit-tap-highlight-color: transparent;
 -webkit-touch-callout: none;
 -webkit-user-select: none;

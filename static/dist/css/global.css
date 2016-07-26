@@ -1,25 +1,72 @@
-.advInfo,.advList{padding: 20px;}
-.adv-box{background: #fff;border-top: 4px solid #e7eaec;}
-.adv-title{padding: 0 15px;height: 43px;}
-.adv-title h3{line-height: 43px;font-size: 14px;}
-.adv-content{border-top: 1px solid #e7eaec;padding: 15px 20px 20px;}
-.adv-content label{margin: 0;line-height: 35px;}
-.adv-content img{width: 150px;}
-.adv-img-list li:not(:first-child){margin-top: 10px;}
-.adv-img-list img{width: 100%;}
-.ab_cover{
-    position: fixed;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,.5);
-    z-index: 99;
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
 }
+/*header 头部样式*/
+.header{
+    padding: 40px 20px 0;
+}
+.logo{
+    float: left;
+}
+.headerRight{
+    float: right;
+    width: 540px;
+}
+.login{
+    float: right;
+    color: #fff;
+}
+.icon-user{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url('../img/icon-user.png') no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.login a{
+    vertical-align: middle;
+    color: #fff;
+}
+.hotline{
+    float: right;
+    margin-left: 25px;
+}
+.icon-tel{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url('../img/icon-tel.png') no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.hotline a{
+    color: #fff;
+    font-weight: bold;
+}
+.nav{
+    float: right;
+    width: 540px;
+    margin-top: 34px;
+}
+.nav a{
+    float: left;
+    display: inline-block;
+    color: #fff;
+    width: 90px;
+    text-align: center;
+}
+.nav a.active:after,.nav a:hover:after{
+    display: block;
+    content: '';
+    width: 62px;
+    height: 6px;
+    margin: 15px auto 0;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,#fff), color-stop(100%,rgba(255,255,255,0)));
+}
+
+/*弹窗*/
 .m-box .ab_x{
     right: 8px;
     text-decoration: none

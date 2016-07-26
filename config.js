@@ -85,25 +85,25 @@
   }
 })(window);
 var oUser = {};
-//var detect = function(){
-//oUser = JSON.parse(sessionStorage.getItem("bossUser"));
-//if(oUser){
-//  if(window.browser['name']=='ie'){
-//    location.href = "#!/advInfo"
-//  }
-//  //if (!/webkit/.test(navigator.userAgent.toLowerCase())) {
-//  //  location.href = "#!/login"
-//  //}
-//}else{
-//  var sUrl = location.href.split("?")[0].split("/"),
-//    urlLength = sUrl.length,
-//    active = (sUrl[urlLength-1]).split(".")[0];
-//  if(active == 'error'){
-//    return;
-//  }
-//  location.href="#!/advInfo"
-//}
-//}();
+var detect = function(){
+oUser = JSON.parse(sessionStorage.getItem("bossUser"));
+if(oUser){
+  if(window.browser['name']=='ie'){
+    location.href = "#!/test"
+  }
+  //if (!/webkit/.test(navigator.userAgent.toLowerCase())) {
+  //  location.href = "#!/login"
+  //}
+}else{
+  var sUrl = location.href.split("?")[0].split("/"),
+    urlLength = sUrl.length,
+    active = (sUrl[urlLength-1]).split(".")[0];
+  if(active == 'error'){
+    return;
+  }
+  location.href="#!/test"
+}
+}();
 
 
 // 配置文件
@@ -119,6 +119,7 @@ require.config({
     mmRequest: 'static/dist/libs/mmRequest',
     jquery: '//cdn.bootcss.com/jquery/1.11.0/jquery.min',
     bootstrap: '//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min',
+    tree:'//cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min',//bootstrap treeview
     'table': 'static/dist/bootstrap/table/bootstrap-table.min',// bootstrap table
     'zh-CN': 'static/dist/bootstrap/table/locale/bootstrap-table-zh-CN.min',// bootstrap table 中文化
     util: 'static/dist/libs/util',// 系统工具库
@@ -165,6 +166,10 @@ require.config({
     },
     'table': {
       exports: 'table',
+      deps: ['bootstrap']
+    },
+    'tree': {
+      exports: 'tree',
       deps: ['bootstrap']
     },
     'zh-CN': {

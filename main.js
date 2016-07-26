@@ -31,10 +31,11 @@ var back = function () {
 };
 
 // 主函数
-require(['avalon','util'], function (avalon) {
+require(['avalon','util','tree'], function (avalon) {
   main = avalon.define({
     $id: 'main',
-    bgClass:'hold-transition skin-blue-light sidebar-mini ms-controller'
+    bgClass:'hold-transition skin-blue-light sidebar-mini ms-controller',
+    header: 'tpl/header/header.html'
   });
   require(['router'],function(){
     avalon.scan();
