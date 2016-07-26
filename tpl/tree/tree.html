@@ -1,0 +1,50 @@
+<div class="batch-operation clearfix">
+    <div class="operation"><i></i><div class="operation-con"><span>批量<br>上/下架</span></div></div>
+    <div class="operation"><i></i><div class="operation-con"><span>批量热点</span></div></div>
+    <div class="operation"><i></i><div class="operation-con"><span>批量删除</span></div></div>
+    <div class="operation"><i></i><div class="operation-con"><span>导入/导出<br>产品</span></div></div>
+</div>
+<div class="tree-search">
+    <input type="text" placeholder="请输入搜索的城市或达人">
+</div>
+<div class="treeview">
+
+</div>
+<script>
+    var tree = [
+        {
+            text: "亚洲",
+            nodes: [
+                {
+                    text: "韩国",
+                    nodes: [
+                        {
+                            text: "首尔"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            text: "非洲"
+        },
+        {
+            text: "欧洲"
+        },
+        {
+            text: "大洋洲"
+        },
+        {
+            text: "南美洲"
+        },
+        {
+            text: "北美洲"
+        }
+
+    ];
+    $('.treeview').treeview({
+        data:tree,
+        expandIcon:"glyphicon glyphicon-triangle-right",
+        collapseIcon:"glyphicon glyphicon-triangle-bottom"
+    });
+</script>

@@ -65,7 +65,104 @@
     margin: 15px auto 0;
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,#fff), color-stop(100%,rgba(255,255,255,0)));
 }
-
+/*tree*/
+.tree{
+    width: 330px;
+    float: left;
+}
+.batch-operation{
+    border: 1px solid #ddd;
+}
+.operation{
+    float: left;
+    width: 25%;
+    height: 105px;
+    padding: 15px 0;
+    text-align: center;
+    border-right: 1px solid #cecece;
+    font-size: 14px;
+    cursor: pointer;
+}
+.operation:last-child{
+    border-right: none;
+}
+.operation i{
+    display: block;
+    margin: 0 auto;
+    background: url('../img/operation.jpg') no-repeat;
+    height: 31px;
+}
+.operation:nth-child(1) i{
+    width: 30px;
+}
+.operation:nth-child(2) i{
+    width: 25px;
+    background-position: -31px 0;
+}
+.operation:nth-child(3) i{
+    width: 30px;
+    background-position: -57px 0;
+}
+.operation:nth-child(4) i{
+    width: 35px;
+    background-position: -88px 0;
+}
+.operation-con{
+    height: 39px;
+    margin-top: 15px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+}
+.operation-con span{
+    color: #428bcb;
+}
+.tree-search{
+    height: 35px;
+    border: 1px solid #ddd;
+    border-top: transparent;
+}
+.tree-search input{
+    font-size: 14px;
+    background: url('../img/tree-search.png') no-repeat 9px center #fff;
+    width: 100%;
+    height: 100%;
+    padding-left: 38px;
+    border: none;
+}
+.tree{
+    color: #474747;
+    min-height: 890px;
+}
+.tree .icon{
+    color: #949494;
+}
+.treeview{
+    height: -webkit-calc(890px - 107px - 35px);
+}
+.list-group{
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    border-top: none;
+    height: 100%;
+}
+.list-group-item{
+    border: none;
+    border-radius: 0;
+}
+.list-group-item:first-child,.list-group-item:last-child{
+    border-radius: 0;
+}
+/*content*/
+.content{
+    background: #fff;
+    margin-top: 25px;
+}
+.airportTransfer{
+}
 /*弹窗*/
 .m-box .ab_x{
     right: 8px;

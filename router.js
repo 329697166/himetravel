@@ -12,6 +12,15 @@ define(['mmState','util'],function(){
 	      }
 	    }
 	})
+	avalon.state('airportTransfer', {
+		url: '/airportTransfer',
+		views: {
+			'contain': {
+				templateUrl: 'tpl/airportTransfer/airportTransfer.html',
+				controllerUrl: 'controller/airportTransfer/airportTransfer'
+			}
+		}
+	})
 	
 	avalon.state.config({
 	    onUnload:function(){

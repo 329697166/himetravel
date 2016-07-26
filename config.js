@@ -85,25 +85,25 @@
   }
 })(window);
 var oUser = {};
-var detect = function(){
-oUser = JSON.parse(sessionStorage.getItem("bossUser"));
-if(oUser){
-  if(window.browser['name']=='ie'){
-    location.href = "#!/test"
-  }
-  //if (!/webkit/.test(navigator.userAgent.toLowerCase())) {
-  //  location.href = "#!/login"
-  //}
-}else{
-  var sUrl = location.href.split("?")[0].split("/"),
-    urlLength = sUrl.length,
-    active = (sUrl[urlLength-1]).split(".")[0];
-  if(active == 'error'){
-    return;
-  }
-  location.href="#!/test"
-}
-}();
+//var detect = function(){
+//oUser = JSON.parse(sessionStorage.getItem("bossUser"));
+//if(oUser){
+//  if(window.browser['name']=='ie'){
+//    location.href = "#!/test"
+//  }
+//  //if (!/webkit/.test(navigator.userAgent.toLowerCase())) {
+//  //  location.href = "#!/login"
+//  //}
+//}else{
+//  var sUrl = location.href.split("?")[0].split("/"),
+//    urlLength = sUrl.length,
+//    active = (sUrl[urlLength-1]).split(".")[0];
+//  if(active == 'error'){
+//    return;
+//  }
+//  location.href="#!/test"
+//}
+//}();
 
 
 // 配置文件

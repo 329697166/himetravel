@@ -3,14 +3,20 @@ ol,ul{list-style: none;}
 fieldset,img {border:0;}
 h1,h2,h3,h4,h5,h6,label{font-size:100%;font-weight:normal;}
 a,a:hover{
-    text-decoration: none;
+text-decoration: none;
 -webkit-tap-highlight-color: transparent;
 -webkit-touch-callout: none;
 -webkit-user-select: none;
 -moz-tap-highlight-color: transparent;
 -moz-touch-callout: none;
--moz-user-select: none;}
+-moz-user-select: none;
+}
 button{border: 0;cursor: pointer;}
 input,button,textarea{outline:none;font-family:sans-serif;border-radius: 0;font-family: "Microsoft YaHei",sans-serif;-webkit-tap-highlight-color: transparent;}
 input,textarea{-webkit-appearance: none;-moz-appearance: none;appearance: none;}
 ::before,::after{display: inline-block;*display: inline;}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
