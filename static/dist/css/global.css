@@ -65,6 +65,7 @@
     margin: 15px auto 0;
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,#fff), color-stop(100%,rgba(255,255,255,0)));
 }
+
 /*tree*/
 .tree{
     width: 330px;
@@ -158,8 +159,8 @@
 }
 /*content*/
 .content{
-    background: #fff;
-    margin-top: 25px;
+    float: left;
+    width: 870px;
 }
 .airportTransfer{
 }

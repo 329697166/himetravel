@@ -1,7 +1,6 @@
 define(['bootstrap','table','zh-CN','ui'],function(){
     var airportTransfer = avalon.define({
         $id: "airportTransfer",
-        tree: "tpl/tree/tree.html"
     })
     return avalon.controller(function ($ctrl) {
         // 进入视图 first
