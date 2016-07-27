@@ -162,7 +162,20 @@
     float: left;
     width: 870px;
 }
-.airportTransfer{
+.pro-option{
+    margin: 20px 20px 0 35px;
+}
+.pro-option a{
+    color: #767575;
+    float: left;
+    margin: 5px 25px 0 0;
+    vertical-align: middle;
+}
+.pro-option a:hover{
+    color: #428bcb;
+}
+.pro-option button{
+    float: right;
 }
 /*弹窗*/
 .m-box .ab_x{

@@ -5,12 +5,14 @@ html,body{font-size: 16px;font-family: "Microsoft YaHei", sans-serif;}
 .b-fs16{font-size: 16px;}
 .b-fs18{font-size: 18px;}
 .b-fs20{font-size: 20px;}
+.b-mt5{margin: 5px 0 0;}
 .b-mt10{margin: 10px 0 0;}
 .b-mt15{margin: 15px 0 0;}
 .b-mt25{margin: 25px 0 0;}
 .b-ml10{margin: 0 0 0 10px;}
 .b-mr10{margin: 0 10px 0 0;}
 .b-p0{padding: 0;}
+.b-plr20{padding: 0 20px;}
 .b-pl10{padding: 0 0 0 10px;}
 .b-pl15{padding: 0 0 0 15px;}
 .b-dn{display: none;}
@@ -18,6 +20,55 @@ html,body{font-size: 16px;font-family: "Microsoft YaHei", sans-serif;}
 .b-ib{display: inline-block;}
 .bg-white{
   background: #fff;
+}
+.b-icon i{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  background: url('../img/icon.png') no-repeat;
+  height: 22px;
+}
+.b-icon-aircraft i{
+  width: 18px;
+  background-position: 0 0;
+}
+.b-icon-aircraft.active i,.b-icon-aircraft:hover i{
+  background-position: 0 -22px;
+}
+.b-icon-car i{
+  width: 21px;
+  background-position: -20px 0;
+}
+.b-icon-car.active i,.b-icon-car:hover i{
+  background-position: -20px -22px;
+}
+.b-icon-carpool i{
+  width: 32px;
+  background-position: -43px 0;
+}
+.b-icon-carpool.active i,.b-icon-carpool:hover i{
+  background-position: -43px -22px;
+}
+.b-icon-pedestrianism i{
+  width: 15px;
+  background-position: -77px 0;
+}
+.b-icon-pedestrianism.active i,.b-icon-pedestrianism:hover i{
+  background-position: -77px -22px;
+}
+.b-icon-climbing i{
+  width: 18px;
+  background-position: -94px 0;
+}
+.b-icon-climbing.active i,.b-icon-climbing:hover i{
+  background-position: -94px -22px;
+}
+.b-icon-map i{
+  width: 16px;
+  background-position: -114px 0;
+}
+.b-icon-map.active i,.b-icon-map:hover i{
+  background-position: -114px -22px;
 }
 .m-pc-box {
   position: absolute;
