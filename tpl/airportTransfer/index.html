@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="static/dist/bootstrap/table/bootstrap-table.css">
+<link rel="stylesheet" href="static/dist/bootstrap/datatimepicker/css/bootstrap-datetimepicker.min.css"/>
+<div class="clearfix" ms-controller="airportTransfer">
+    <div class="pro-option clearfix">
+        <a class="b-icon b-icon-aircraft active" href="javascript:;"><i></i>接送机</a>
+        <a class="b-icon b-icon-car" href="javascript:;"><i></i>专车专导</a>
+        <a class="b-icon b-icon-carpool" href="javascript:;"><i></i>结伴拼车</a>
+        <a class="b-icon b-icon-pedestrianism" href="javascript:;"><i></i>徒步陪游</a>
+        <a class="b-icon b-icon-climbing" href="javascript:;"><i></i>特色游玩</a>
+        <a class="b-icon b-icon-map" href="javascript:;"><i></i>经典行程</a>
+        <button type="button" class="btn btn-primary" ms-on-click="addFun">新增产品</button>
+    </div>
+    <div class="b-plr20 b-mt10">
+        <table id="bTable" class="table"></table>
+    </div>
+    <div class="modal fade" id="airportModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">接送机</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <nav class="modalNav">
+                        <a ms-class="active:navIndex==0" href="javascript:;" ms-on-click="navAction()">基本信息</a>
+                        <a ms-class="active:navIndex==1" href="javascript:;" ms-on-click="navAction()">服务标准</a>
+                        <a ms-class="active:navIndex==2" href="javascript:;" ms-on-click="navAction()">费用说明</a>
+                        <a ms-class="active:navIndex==3" href="javascript:;" ms-on-click="navAction()">机场介绍</a>
+                        <a ms-class="active:navIndex==4" href="javascript:;" ms-on-click="navAction()">购买须知</a>
+                    </nav>
+                    <div class="essInfo" ms-visible="navIndex==0">
+                        <img src="static/dist/img/uploadBg.png" alt="">
+                        <div class="modalForm">
+                            <h4 class="modalFormTitle"><p>服务内容</p></h4>
+                            <div class="col-md-12 b-p20">
+                                <div class="col-md-6">
+                                    <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;接送点</label>
+                                    <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：白云机场"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;目的地</label>
+                                    <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：广州市内"></div>
+                                </div>
+                                <div class="col-md-10 b-mt20">
+                                    <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;服务时间</label>
+                                    <div class="col-md-4"><input size="16" type="text" class="form_datetime form-control" placeholder="2016-01-01 00:00:00" ms-on-click="datetimeFun"></div>
+                                    <span class="modalFormTimeTo">至</span>
+                                    <div class="col-md-4"><input size="16" type="text" class="form_datetime form-control" placeholder="2016-01-01 00:00:00" ms-on-click="datetimeFun"></div>
+                                </div>
+                            </div>
+                            <h4 class="modalFormTitle"><p>所属达人</p></h4>
+                            <div class="col-md-12 b-p20">
+                                <div class="col-md-10">
+                                    <div class="col-md-8 b-p0"><input size="16" type="text" class="form-control" placeholder="例如：北美洲 | 美国 · 洛杉矶  李明"></div>
+                                    <div class="b-fr">
+                                        <button class="btn btn-primary">选择达人</button>
+                                        <button class="btn btn-primary">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modalFormFooter">
+                                <button class="btn btn-primary" ms-on-click="navNext()">下一步</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serStand" ms-visible="navIndex==1" ms-include-src="serStand"></div>
+                    <div class="expExplana" ms-visible="navIndex==2" ms-include-src="expExplana"></div>
+                    <div class="airportIntro" ms-visible="navIndex==3" ms-include-src="airportIntro"></div>
+                    <div class="purchaseNotes" ms-visible="navIndex==4" ms-include-src="purchaseNotes"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,7 +16,7 @@ define(['mmState','util'],function(){
 		url: '/airportTransfer',
 		views: {
 			'contain': {
-				templateUrl: 'tpl/airportTransfer/airportTransfer.html',
+				templateUrl: 'tpl/airportTransfer/index.html',
 				controllerUrl: 'controller/airportTransfer/airportTransfer'
 			}
 		}

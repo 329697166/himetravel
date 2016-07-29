@@ -1,8 +1,8 @@
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,textarea,p,th,td{margin: 0px;padding: 0px;font-family: "Microsoft YaHei",sans-serif;}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,textarea,p,th,td{margin: 0px;padding: 0px;font-family: \5FAE\8F6F\96C5\9ED1,\534E\6587\7EC6\9ED1;}
 ol,ul{list-style: none;}
 fieldset,img {border:0;}
 h1,h2,h3,h4,h5,h6,label{font-size:100%;font-weight:normal;}
-a,a:hover{
+a,a:link,a:visited,a:active,a:hover{
 text-decoration: none;
 -webkit-tap-highlight-color: transparent;
 -webkit-touch-callout: none;
@@ -13,7 +13,7 @@ text-decoration: none;
 }
 button{border: 0;cursor: pointer;}
 input,button,textarea{outline:none;font-family:sans-serif;border-radius: 0;font-family: "Microsoft YaHei",sans-serif;-webkit-tap-highlight-color: transparent;}
-input,textarea{-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+textarea{-webkit-appearance: none;-moz-appearance: none;appearance: none;}
 ::before,::after{display: inline-block;*display: inline;}
 *{
     -webkit-box-sizing: border-box;

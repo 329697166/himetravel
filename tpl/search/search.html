@@ -1,0 +1,18 @@
+<div class="b-fr col-lg-3" ms-controller="search">
+    <div class="input-group">
+        <input type="text" class="form-control" ms-duplex="searchVal" placeholder="搜索产品名 达人姓名">
+      <span class="input-group-btn">
+        <button class="btn btn-primary searchBtn" type="button"><i class="glyphicon glyphicon-search"></i></button>
+      </span>
+    </div><!-- /input-group -->
+</div>
+<script>
+    var search;
+    search = avalon.define({
+        $id: 'search',
+        searchVal:'',
+        searchFun:function (){
+            alert("aaa");
+        }
+    });
+</script>

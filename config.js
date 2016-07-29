@@ -122,6 +122,8 @@ require.config({
     tree:'//cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min',//bootstrap treeview
     'table': 'static/dist/bootstrap/table/bootstrap-table.min',// bootstrap table
     'zh-CN': 'static/dist/bootstrap/table/locale/bootstrap-table-zh-CN.min',// bootstrap table 中文化
+    'datapicker': 'static/dist/bootstrap/datatimepicker/js/bootstrap-datetimepicker',
+    'zh-CN2': 'static/dist/bootstrap/datatimepicker/js/locales/bootstrap-datetimepicker.zh-CN',
     util: 'static/dist/libs/util',// 系统工具库
     router: 'router',
     mock: 'static/dist/libs/mock-min',
@@ -175,6 +177,14 @@ require.config({
     'zh-CN': {
       exports: 'zh-CN',
       deps: ['table']
+    },
+    'datapicker': {
+      exports: 'datapicker',
+      deps: ['bootstrap']
+    },
+    'zh-CN2': {
+      exports: 'zh-CN2',
+      deps: ['datapicker']
     }
   }
 }); // 配置结束

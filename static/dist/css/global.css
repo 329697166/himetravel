@@ -65,7 +65,17 @@
     margin: 15px auto 0;
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,#fff), color-stop(100%,rgba(255,255,255,0)));
 }
-
+.wrap{
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+/*search*/
+.search{
+    background: #f5f5f5;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 0;
+}
 /*tree*/
 .tree{
     width: 330px;
@@ -73,6 +83,8 @@
 }
 .batch-operation{
     border: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
 }
 .operation{
     float: left;
@@ -124,7 +136,8 @@
 .tree-search{
     height: 35px;
     border: 1px solid #ddd;
-    border-top: transparent;
+    border-top: none;
+    border-left: none;
 }
 .tree-search input{
     font-size: 14px;
@@ -136,18 +149,18 @@
 }
 .tree{
     color: #474747;
-    min-height: 890px;
 }
 .tree .icon{
     color: #949494;
 }
 .treeview{
-    height: -webkit-calc(890px - 107px - 35px);
+    height: -webkit-calc(738px - 107px - 35px);
 }
 .list-group{
     margin-bottom: 0;
     border: 1px solid #ddd;
     border-top: none;
+    border-left: none;
     height: 100%;
 }
 .list-group-item{
@@ -160,7 +173,7 @@
 /*content*/
 .content{
     float: left;
-    width: 870px;
+    width: 868px;
 }
 .pro-option{
     margin: 20px 20px 0 35px;
@@ -171,11 +184,107 @@
     margin: 5px 25px 0 0;
     vertical-align: middle;
 }
-.pro-option a:hover{
+.pro-option a.active,.pro-option a:hover{
     color: #428bcb;
 }
 .pro-option button{
     float: right;
+}
+.tab-proName,.tab-operation{
+    color: #33a0ff;
+}
+.tab-operation{
+    margin-right: 10px;
+}
+.tab-operation:last-child{
+    margin-right: 0;
+}
+.modalNav{
+    padding: 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.modalNav a{
+    color: #333;
+    margin-right: 60px;
+}
+.modalNav a:last-child{
+    margin-right: 0;
+}
+.modalNav a.active{
+    color: #13a4e7;
+}
+.essInfo{
+    padding: 25px 34px;
+}
+.modalForm{
+    margin-top: 30px;
+}
+.modalFormTitle{
+    float: left;
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+}
+.modalFormTitle:before{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 36px;
+    position: absolute;
+    left: 3px;
+    top: 0;
+    background: #20a9f7;
+    border-radius: 4px;
+}
+.modalFormTitle p{
+    padding-bottom: 5px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 36px;
+    border-bottom: 1px solid #d3d3d3;
+}
+.modalFormLabel{
+    width: 125px;
+    float: left;
+    margin: 0;
+    font-size: 22px;
+    line-height: 34px;
+}
+.modalFormTimeTo{
+    width: 100px;
+    float: left;
+    text-align: center;
+    line-height: 34px;
+    color: #808080;
+}
+.modalFormFooter{
+    float: left;
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+}
+/*footer*/
+.footer{
+    margin: 70px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #9f9e9e;
+}
+.footer a{
+    color: #66a2d5;
+}
+/*modal*/
+.modal-dialog{
+    width: 1000px;
+}
+.modal-body{
+    padding: 0;
+}
+.modal-content{
+    overflow: hidden;
+}
+.modal-header{
+    background: #f1f7fb;
 }
 /*弹窗*/
 .m-box .ab_x{

@@ -36,7 +36,9 @@ require(['avalon','util','tree'], function (avalon) {
     $id: 'main',
     bgClass:'hold-transition skin-blue-light sidebar-mini ms-controller',
     header: 'tpl/header/header.html',
-    tree: "tpl/tree/tree.html"
+    search: "tpl/search/search.html",
+    tree: "tpl/tree/tree.html",
+    footer: "tpl/footer/footer.html"
   });
   require(['router'],function(){
     avalon.scan();

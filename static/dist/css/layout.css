@@ -1,23 +1,31 @@
-html,body{font-size: 16px;font-family: "Microsoft YaHei", sans-serif;}
+html,body{font-size: 16px;}
 .globalBg{background: url('../img/globalBg.jpg') no-repeat;}
 .b-fs12{font-size: 12px;}
 .b-fs14{font-size: 14px;}
 .b-fs16{font-size: 16px;}
 .b-fs18{font-size: 18px;}
 .b-fs20{font-size: 20px;}
+.b-m0{margin: 0;}
 .b-mt5{margin: 5px 0 0;}
 .b-mt10{margin: 10px 0 0;}
 .b-mt15{margin: 15px 0 0;}
+.b-mt20{margin: 20px 0 0;}
 .b-mt25{margin: 25px 0 0;}
 .b-ml10{margin: 0 0 0 10px;}
 .b-mr10{margin: 0 10px 0 0;}
 .b-p0{padding: 0;}
+.b-p20{padding: 20px;}
 .b-plr20{padding: 0 20px;}
 .b-pl10{padding: 0 0 0 10px;}
 .b-pl15{padding: 0 0 0 15px;}
 .b-dn{display: none;}
 .b-fl{float: left;}
+.b-fr{float: right;}
 .b-ib{display: inline-block;}
+.b-lh34{line-height: 34px;}
+.b-reg{
+  color: #f36a5a;
+}
 .bg-white{
   background: #fff;
 }
@@ -69,6 +77,9 @@ html,body{font-size: 16px;font-family: "Microsoft YaHei", sans-serif;}
 }
 .b-icon-map.active i,.b-icon-map:hover i{
   background-position: -114px -22px;
+}
+.table{
+  font-size: 14px;
 }
 .m-pc-box {
   position: absolute;

@@ -1,6 +1,20 @@
-define(['bootstrap','table','zh-CN','ui'],function(){
+define(['bootstrap','table','zh-CN','ui','datapicker','zh-CN2'],function(){
     var airportTransfer = avalon.define({
         $id: "airportTransfer",
+        serStand: "tpl/airportTransfer/serStand.html",
+        expExplana: "tpl/airportTransfer/expExplana.html",
+        airportIntro: "tpl/airportTransfer/airportIntro.html",
+        purchaseNotes: "tpl/airportTransfer/purchaseNotes.html",
+        navIndex:0,
+        addFun:function (){
+          $("#airportModal").modal('toggle');
+        },
+        navAction:function (){
+            airportTransfer.navIndex = $(this).index();
+        },
+        navNext:function (){
+            airportTransfer.navIndex++;
+        },
         getTable: function (url) {
             window.operateEvents = {
                 //'click .j-test': function (e, value, row, index) {// 操作按钮事件绑定
@@ -26,11 +40,11 @@ define(['bootstrap','table','zh-CN','ui'],function(){
                 columns: [
                     //field:res的key名,title:表头名字,checkbox:是否需要复选框,events:事件绑定,formatter:调用自定义表格内容;
                     {field: 'state', checkbox: true},
-                    {field: 'proName', title: '产品名'},
+                    {field: 'proName', title: '产品名',formatter:proNameFormatter},
                     {field: 'MasterName', title: '达人姓名'},
                     {field: 'time',title: '创建时间'},
                     {field: 'editTime',title: '修改时间'},
-                    {field: 'operation',title: '操作',formatter:operationFormatter}
+                    {field: 'operation',title: '操作',formatter:operationFormatter,align:"center"}
                 ],
                 pagination: true,//开启翻页
                 pageSize: 10,//表格初始行数
@@ -51,21 +65,44 @@ define(['bootstrap','table','zh-CN','ui'],function(){
             }, 200);
 
             //自定义表格内容
-            function operationFormatter(value, row, index) {
+            function proNameFormatter(value, row, index) {
                 return [
-                    '<a class="j-test" href="javascript:void(0)">测试</a>'
+                    '<a class="tab-proName" href="javascript:void(0)">'+row.proName+'</a>'
                 ].join('');
             }
+            function operationFormatter(value, row, index) {
+                return [
+                    '<a class="j-test tab-operation" href="javascript:void(0)">热点</a>',
+                    '<a class="j-test tab-operation" href="javascript:void(0)">上架</a>',
+                    '<a class="j-test tab-operation" href="javascript:void(0)">下架</a>',
+                    '<a class="j-test tab-operation" href="javascript:void(0)">编辑</a>',
+                    '<a class="j-test tab-operation" href="javascript:void(0)">删除</a>'
+                ].join('');
+            }
+        },
+        datetimeFun: function () {
+            $(this).datetimepicker({
+                format: 'yyyy-mm-dd hh:ii:ss',
+                language: 'zh-CN',
+                weekStart: 1,
+                autoclose: true,
+                todayHighlight: 1,
+                container: $(this).parent()
+            });
+            $(this).focus();
         }
     })
     return avalon.controller(function ($ctrl) {
         // 进入视图 first
         $ctrl.$onEnter = function () {
-
+            $(".nav a").eq(1).addClass("active").siblings().removeClass("active");
         }
         // 视图渲染后，意思是avalon.scan完成 second
         $ctrl.$onRendered = function () {
             airportTransfer.getTable();
+            $(".searchBtn").click(function (){
+                search.searchFun()
+            });
         }
         // 对应的视图销毁前，就是离开当前页面时的操作
         $ctrl.$onBeforeUnload = function () {
