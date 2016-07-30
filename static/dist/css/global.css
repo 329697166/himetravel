@@ -286,6 +286,14 @@
     border-color: #f19149;
     color: rgba(255, 255, 255, .6);
 }
+.money{
+    position: absolute;
+    font-style: normal;
+    font-size: 24px;
+    top: 1px;
+    left: 45px;
+    color: #f36a5a;
+}
 .modalFormFooter{
     float: left;
     width: 100%;
