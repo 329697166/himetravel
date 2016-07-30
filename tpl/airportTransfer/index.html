@@ -63,10 +63,77 @@
                             </div>
                         </div>
                     </div>
-                    <div class="serStand" ms-visible="navIndex==1" ms-include-src="serStand"></div>
-                    <div class="expExplana" ms-visible="navIndex==2" ms-include-src="expExplana"></div>
-                    <div class="airportIntro" ms-visible="navIndex==3" ms-include-src="airportIntro"></div>
-                    <div class="purchaseNotes" ms-visible="navIndex==4" ms-include-src="purchaseNotes"></div>
+                    <div class="serStand" ms-visible="navIndex==1">
+                        <div class="col-md-12 b-p20">
+                            <div class="col-md-6">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;车辆品牌</label>
+                                <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：丰田"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;建议可载人数</label>
+                                <div class="col-md-7">
+                                    <select class="form-control">
+                                        <option value="">1</option>
+                                        <option value="">1</option>
+                                        <option value="">1</option>
+                                    </select>
+                                </div>
+                                <span class="col-md-1 text-center b-lh34 b-p0 b-reg">人</span>
+                            </div>
+                            <div class="col-md-6 b-mt20">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;车辆型号</label>
+                                <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：锐志"></div>
+                            </div>
+                            <div class="col-md-6 b-mt20">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;建议行李数</label>
+                                <div class="col-md-7">
+                                    <select class="form-control">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                                <span class="col-md-1 text-center b-lh34 b-p0 b-reg">件</span>
+                            </div>
+                            <div class="col-md-6 b-mt20">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;购买年份</label>
+                                <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：2016"></div>
+                            </div>
+                            <div class="col-md-6 b-mt20">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;含儿童座椅</label>
+                                <div class="col-md-7">
+                                    <div class="childSeatBtn"><button ms-on-click="childSeatBtn">包含</button></div>
+                                    <div class="childSeatBtn"><button ms-on-click="childSeatBtn">不包含</button></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 b-mt20">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;服务区域</label>
+                                <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：全城皆可"></div>
+                            </div>
+                            <div class="col-md-6 b-mt20">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;夜间服务费</label>
+                                <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：150"></div>
+                            </div>
+                            <div class="col-md-6 b-mt20">
+                                <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;服务包含</label>
+                                <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：水，咖啡"></div>
+                            </div>
+                            <div class="col-md-12 b-mt20">
+                                <label class="modalFormLabel">航班延误说明</label>
+                                <textarea class="form-control b-resize" rows="5">
+航班落地后免费等待90分钟，超90分钟开始计算等待费用，200元/小时（现付）。
+订购服务时， 您所填写的飞机落地时间，自飞机落地时间顺延90分钟之内上车，90分钟足够您办理入境手续、提取行李等各项手续。如在约定服务时间90分钟后，您还没有上车，请及时与我们的客服联系。距离约定接送服务超过2小时后，且我方联系不上您的情况下，系统默认您已经结束本次服务。
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="modalFormFooter">
+                            <button class="btn btn-primary" ms-on-click="navPrev()">上一步</button>
+                            <button class="btn btn-primary" ms-on-click="navNext()">下一步</button>
+                        </div>
+                    </div>
+                    <div class="expExplana" ms-visible="navIndex==2"></div>
+                    <div class="airportIntro" ms-visible="navIndex==3"></div>
+                    <div class="purchaseNotes" ms-visible="navIndex==4"></div>
                 </div>
             </div>
         </div>

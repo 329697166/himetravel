@@ -1,16 +1,30 @@
 define(['bootstrap','table','zh-CN','ui','datapicker','zh-CN2'],function(){
     var airportTransfer = avalon.define({
         $id: "airportTransfer",
-        serStand: "tpl/airportTransfer/serStand.html",
-        expExplana: "tpl/airportTransfer/expExplana.html",
-        airportIntro: "tpl/airportTransfer/airportIntro.html",
-        purchaseNotes: "tpl/airportTransfer/purchaseNotes.html",
         navIndex:0,
+        essInfo:{
+
+        },
+        serStand:{
+
+        },
+        expExplana:{
+
+        },
+        airportIntro:{
+
+        },
+        purchaseNotes:{
+
+        },
         addFun:function (){
           $("#airportModal").modal('toggle');
         },
         navAction:function (){
             airportTransfer.navIndex = $(this).index();
+        },
+        navPrev:function (){
+            airportTransfer.navIndex--;
         },
         navNext:function (){
             airportTransfer.navIndex++;
@@ -38,7 +52,7 @@ define(['bootstrap','table','zh-CN','ui','datapicker','zh-CN2'],function(){
                 data:data,
                 //url: url,
                 columns: [
-                    //field:res的key名,title:表头名字,checkbox:是否需要复选框,events:事件绑定,formatter:调用自定义表格内容;
+                    //field:后台定义的data的key名,title:表头名字,checkbox:是否需要复选框,events:事件绑定,formatter:调用自定义表格内容;
                     {field: 'state', checkbox: true},
                     {field: 'proName', title: '产品名',formatter:proNameFormatter},
                     {field: 'MasterName', title: '达人姓名'},
@@ -90,6 +104,9 @@ define(['bootstrap','table','zh-CN','ui','datapicker','zh-CN2'],function(){
                 container: $(this).parent()
             });
             $(this).focus();
+        },
+        childSeatBtn:function (){
+            $(this).parent().addClass("active").siblings().removeClass("active");
         }
     })
     return avalon.controller(function ($ctrl) {

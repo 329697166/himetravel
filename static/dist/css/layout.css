@@ -15,6 +15,7 @@ html,body{font-size: 16px;}
 .b-mr10{margin: 0 10px 0 0;}
 .b-p0{padding: 0;}
 .b-p20{padding: 20px;}
+.b-ptb20{padding: 20px 0;}
 .b-plr20{padding: 0 20px;}
 .b-pl10{padding: 0 0 0 10px;}
 .b-pl15{padding: 0 0 0 15px;}
@@ -23,6 +24,9 @@ html,body{font-size: 16px;}
 .b-fr{float: right;}
 .b-ib{display: inline-block;}
 .b-lh34{line-height: 34px;}
+.b-resize{
+  resize: none;
+}
 .b-reg{
   color: #f36a5a;
 }
