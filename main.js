@@ -35,10 +35,10 @@ require(['avalon','util','tree'], function (avalon) {
   main = avalon.define({
     $id: 'main',
     bgClass:'hold-transition skin-blue-light sidebar-mini ms-controller',
-    header: 'tpl/header/header.html',
-    search: "tpl/search/search.html",
-    tree: "tpl/tree/tree.html",
-    footer: "tpl/footer/footer.html"
+    header: 'tpl/header.html',
+    search: "tpl/search.html",
+    tree: "tpl/tree.html",
+    footer: "tpl/footer.html"
   });
   require(['router'],function(){
     avalon.scan();
