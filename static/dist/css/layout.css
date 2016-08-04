@@ -1,5 +1,6 @@
 html,body{font-size: 16px;}
 .globalBg{background: url('../img/globalBg.jpg') no-repeat;}
+.b-w105{width: 105px;}
 .b-fs12{font-size: 12px;}
 .b-fs14{font-size: 14px;}
 .b-fs16{font-size: 16px;}
@@ -39,6 +40,8 @@ html,body{font-size: 16px;}
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
+}
+.b-icon-aircraft i,.b-icon-car i,.b-icon-carpool i,.b-icon-pedestrianism i,.b-icon-pedestrianism i,.b-icon-map i{
   background: url('../img/icon.png') no-repeat;
   height: 22px;
 }
@@ -70,7 +73,7 @@ html,body{font-size: 16px;}
 .b-icon-pedestrianism.active i,.b-icon-pedestrianism:hover i{
   background-position: -77px -22px;
 }
-.b-icon-climbing i{
+.b-icon-pedestrianism i{
   width: 18px;
   background-position: -94px 0;
 }
@@ -83,6 +86,57 @@ html,body{font-size: 16px;}
 }
 .b-icon-map.active i,.b-icon-map:hover i{
   background-position: -114px -22px;
+}
+.b-icon-product i,.b-icon-customized i,.b-icon-wish i{
+  background: url('../img/order-icon.png') no-repeat;
+  height: 19px;
+}
+.b-icon-product i{
+  width: 18px;
+  background-position: 0 0;
+}
+.b-icon-customized i{
+  width: 19px;
+  background-position: -19px 0;
+}
+.b-icon-wish i{
+  width: 18px;
+  background-position: -39px 0;
+}
+.b-icon-product.active i,.b-icon-product:hover i{
+  background-position: 0 -19px;
+}
+.b-icon-customized.active i,.b-icon-customized:hover i{
+  background-position: -19px -19px;
+}
+.b-icon-wish.active i,.b-icon-wish:hover i{
+  background-position: -19px -39px;
+}
+.s-icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  background: url('../img/select-icon.png');
+}
+.s-icon-aircraft{
+  background-position: 0 0;
+}
+.s-icon-car{
+  background-position: -68px 0;
+}
+.s-icon-carpool{
+  background-position: -17px 0;
+}
+.s-icon-pedestrianism{
+  background-position: -34px 0;
+}
+.s-icon-climbing{
+  background-position: -51px 0;
+}
+.s-icon-classical{
+  background-position: -85px 0;
 }
 .table{
   font-size: 14px;

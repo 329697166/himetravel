@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2015/11/24.
- */
 define(["zh-CN"],function(){
   var index = avalon.define({
     $id: 'index'

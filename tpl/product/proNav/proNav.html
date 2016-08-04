@@ -1,3 +1,8 @@
-<div ms-controller="proNav">
-    <a ms-repeat="nav" ms-class="{{el.active?el.className+' '+'active':el.className}}" ms-href="el.link"><i></i>{{el.content}}</a>
+<div class="proNav">
+    <a ms-attr-class="b-icon b-icon-aircraft {{main.proNav==0?'active':''}}" ms-onclick="activeFun" href="#!/airportTransfer"><i></i>接送机</a>
+    <a ms-class="b-icon b-icon-car {{main.proNav==1?'active':''}}" ms-onclick="activeFun" href="#!/car"><i></i>专车专导</a>
+    <a ms-class="b-icon b-icon-carpool {{main.proNav==2?'active':''}}" ms-onclick="activeFun" href="#!/carpool"><i></i>结伴拼车</a>
+    <a ms-class="b-icon b-icon-pedestrianism {{main.proNav==3?'active':''}}" ms-onclick="activeFun" href="#!/pedestrianism"><i></i>徒步陪游</a>
+    <a ms-class="b-icon b-icon-climbing {{main.proNav==4?'active':''}}" ms-onclick="activeFun" href="#!/climbing"><i></i>特色游玩</a>
+    <a ms-class="b-icon b-icon-map {{main.proNav==5?'active':''}}" ms-onclick="activeFun" href="#!/classical"><i></i>经典行程</a>
 </div>

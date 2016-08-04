@@ -38,12 +38,20 @@ require(['avalon','util','tree'], function (avalon) {
     header: 'tpl/header.html',
     search: "tpl/search.html",
     tree: "tpl/tree.html",
-    footer: "tpl/footer.html"
+    footer: "tpl/footer.html",
+    searchShow:false,
+    operationShow:false,
+    proNav:0,
+    orderNav:0
   });
   require(['router'],function(){
     avalon.scan();
   });
   avalon.ready(function () {// avalon加载完执行
-
+    var lhash = location.href;
+    if(lhash == '' || lhash == "#!/"){
+      main.searchShow=false;
+      main.operationShow=false;
+    }
   });
 });

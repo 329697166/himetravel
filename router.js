@@ -57,6 +57,15 @@ define(['mmState','util'],function(){
 			}
 		}
 	})
+	avalon.state('productManage', {
+		url: '/productManage',
+		views: {
+			'contain': {
+				templateUrl: 'tpl/orderManage/productManage.html',
+				controllerUrl: 'controller/orderManage/productManage'
+			}
+		}
+	})
 	avalon.state.config({
 	    onUnload:function(){
 	      util.loadingFunc();

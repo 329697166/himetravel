@@ -1,4 +1,4 @@
-define(["controller/product/proNav/proNav",'ui','datapicker','zh-CN2'],function(proNav){
+define(['ui','datapicker','zh-CN2'],function(){
     var airportTransfer = avalon.define({
         $id: "airportTransfer",
         proNav:"tpl/product/proNav/proNav.html",
@@ -95,13 +95,12 @@ define(["controller/product/proNav/proNav",'ui','datapicker','zh-CN2'],function(
         // 进入视图 first
         $ctrl.$onEnter = function () {
             $(".nav a").eq(1).addClass("active").siblings().removeClass("active");
-            for(var i= 0,l=proNav.nav.length;i<l;i++){
-                proNav.nav[i].active = false;
-            }
-            proNav.nav[0].active = true;
         }
         // 视图渲染后，意思是avalon.scan完成 second
         $ctrl.$onRendered = function () {
+            main.searchShow=true;
+            main.operationShow=true;
+            main.proNav = 0;
             $(".searchBtn").click(function (){
                 search.searchFun()
             });
