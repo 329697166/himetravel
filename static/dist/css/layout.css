@@ -14,19 +14,27 @@ html,body{font-size: 16px;}
 .b-mt20{margin: 20px 0 0;}
 .b-mt25{margin: 25px 0 0;}
 .b-ml10{margin: 0 0 0 10px;}
+.b-mr5{margin: 0 5px 0 0;}
 .b-mr10{margin: 0 10px 0 0;}
 .b-p0{padding: 0;}
 .b-p20{padding: 20px;}
+.b-ptb10{padding: 10px 0;}
 .b-ptb20{padding: 20px 0;}
 .b-plr20{padding: 0 20px;}
+.b-plr20-2{padding-left: 20px;padding-right: 20px;}
 .b-pl10{padding: 0 0 0 10px;}
 .b-pl15{padding: 0 0 0 15px;}
 .b-pl50{padding: 0 0 0 50px;}
 .b-dn{display: none;}
 .b-fl{float: left;}
 .b-fr{float: right;}
+.b-por{position: relative;}
+.b-poa{position: absolute;}
 .b-ib{display: inline-block;}
 .b-lh34{line-height: 34px;}
+.b-c666{
+  color: #666666;
+}
 .b-resize{
   resize: none;
 }
@@ -110,7 +118,7 @@ html,body{font-size: 16px;}
   background-position: -19px -19px;
 }
 .b-icon-wish.active i,.b-icon-wish:hover i{
-  background-position: -19px -39px;
+  background-position: -39px -19px;
 }
 .s-icon{
   display: inline-block;
@@ -138,8 +146,39 @@ html,body{font-size: 16px;}
 .s-icon-classical{
   background-position: -85px 0;
 }
+.m-icon-wrap{
+  display: inline-block;
+}
+.m-icon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a9a9a9;
+  border-radius: 10px;
+  font-style: normal;
+  color: #a9a9a9;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 10px;
+}
+.m-icon:first-child{
+  margin-left: 10px;
+}
+.m-icon:last-child{
+  margin-right: 0;
+}
 .table{
   font-size: 14px;
+}
+.table th:nth-child(2),.table td:nth-child(2){
+  width: 305px;
+}
+.star{
+  margin-left: 10px;
+  display: inline-block;
+  color: #ffb23f;
+  font-size: 16px;
 }
 .m-pc-box {
   position: absolute;

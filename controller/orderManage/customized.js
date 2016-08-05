@@ -1,6 +1,6 @@
 define(['ui','datapicker','zh-CN2'],function(){
-    var productManage = avalon.define({
-        $id: "productManage",
+    var customized = avalon.define({
+        $id: "customized",
         orderNav:'tpl/orderManage/orderNav/orderNav.html',
         navIndex:0,
         allChecked:function (){
@@ -43,7 +43,7 @@ define(['ui','datapicker','zh-CN2'],function(){
         $ctrl.$onRendered = function () {
             main.searchShow=true;
             main.operationShow=true;
-            main.orderNav = 0;
+            main.orderNav = 1;
             $(".searchBtn").click(function (){
                 search.searchFun()
             });

@@ -66,6 +66,33 @@ define(['mmState','util'],function(){
 			}
 		}
 	})
+	avalon.state('customized', {
+		url: '/customized',
+		views: {
+			'contain': {
+				templateUrl: 'tpl/orderManage/customized.html',
+				controllerUrl: 'controller/orderManage/customized'
+			}
+		}
+	})
+	avalon.state('wish', {
+		url: '/wish',
+		views: {
+			'contain': {
+				templateUrl: 'tpl/orderManage/wish.html',
+				controllerUrl: 'controller/orderManage/wish'
+			}
+		}
+	})
+	avalon.state('master', {
+		url: '/master',
+		views: {
+			'contain': {
+				templateUrl: 'tpl/master/master.html',
+				controllerUrl: 'controller/master/master'
+			}
+		}
+	})
 	avalon.state.config({
 	    onUnload:function(){
 	      util.loadingFunc();

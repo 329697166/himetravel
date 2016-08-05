@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="static/dist/bootstrap/table/bootstrap-table.css">
+<div class="productManage" ms-controller="master">
+    <div class="order-option clearfix">
+    </div>
+    <div class="b-plr20 b-mt10 has-feedback">
+        <table id="bTable" class="table"></table>
+    </div>
+    <div class="modal fade" id="examineModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">订单详情</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="col-md-12 b-mt20">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#essInfo" aria-controls="home" role="tab" data-toggle="tab">基本信息</a></li>
+                            <li role="presentation"><a href="#perIntro" aria-controls="profile" role="tab" data-toggle="tab">个人介绍</a></li>
+                            <li role="presentation"><a href="#papersUpload" aria-controls="messages" role="tab" data-toggle="tab">证件上传</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane clearfix active" id="essInfo">
+                                <div class="essHeader clearfix">
+                                    <div class="masterImg b-fl">
+                                        <img src="static/dist/img/userImg.png" alt="" class="b-fl">
+                                    </div>
+                                    <div class="masterName">
+                                        <span>LV.1</span>
+                                        A-Hui
+                                    </div>
+                                    <a class="masterImgEdit" href="javascript:;"><i class="glyphicon glyphicon-pencil"></i>修改头像</a>
+                                </div>
+                                <div class="essContent b-ptb20 clearfix">
+                                    <div class="col-md-6">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;姓名</label>
+                                        <div class="col-md-8"><input class="form-control" type="text" placeholder="请输入姓名"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;性别</label>
+                                        <div class="col-md-8 b-mt5"><input type="radio" name="sex">&nbsp;&nbsp;男&nbsp;&nbsp;<input type="radio" name="sex">&nbsp;&nbsp;女&nbsp;&nbsp;</div>
+                                    </div>
+                                    <div class="col-md-12 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;语言</label>
+                                        <div class="col-md-2 b-por"><i class="languageDel glyphicon glyphicon-minus-sign"></i><input class="form-control text-center" type="text" /></div>
+                                        <button class="btn btn-default b-ml10 b-plr20-2">+</button>
+                                    </div>
+                                    <div class="col-md-6 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;所在地</label>
+                                        <div class="col-md-4">
+                                            <select class="form-control">
+                                                <option disabled>国家</option>
+                                                <option>中国</option>
+                                                <option>日本</option>
+                                                <option>韩国</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="form-control">
+                                                <option disabled>城市</option>
+                                                <option>北京</option>
+                                                <option>广州</option>
+                                                <option>上海</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;居住时长</label>
+                                        <div class="col-md-7"><input class="form-control" type="text" placeholder="请输入居住时长"></div>
+                                        <span class="col-md-1 text-center b-lh34 b-p0">年</span>
+                                    </div>
+                                    <div class="col-md-12 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;居住地址</label>
+                                        <div class="col-md-10"><input class="form-control" type="text" placeholder="请输入详细地址" /></div>
+                                    </div>
+                                    <div class="col-md-6 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;手机</label>
+                                        <div class="col-md-8"><input class="form-control" type="text" placeholder="请输入手机号码"></div>
+                                    </div>
+                                    <div class="col-md-6 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;微信</label>
+                                        <div class="col-md-8"><input class="form-control" type="text" placeholder="请输入微信号"></div>
+                                    </div>
+                                    <div class="col-md-6 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;邮箱</label>
+                                        <div class="col-md-8"><input class="form-control" type="text" placeholder="请输入邮箱号"></div>
+                                    </div>
+                                    <div class="col-md-6 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;职业</label>
+                                        <div class="col-md-8"><input class="form-control" type="text" placeholder="请输入职业"></div>
+                                    </div>
+                                    <div class="col-md-12 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;爱好</label>
+                                        <div class="col-md-10"><input class="form-control" type="text"></div>
+                                    </div>
+                                    <div class="col-md-12 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;特长</label>
+                                        <div class="col-md-10"><input class="form-control" type="text"></div>
+                                    </div>
+                                    <div class="col-md-12 b-mt10">
+                                        <label class="modalFormLabel"><i class="b-reg">*</i>&nbsp;简介</label>
+                                        <div class="col-md-10">
+                                            <textarea class="form-control b-resize" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modalFormFooter">
+                                    <button class="btn btn-primary">保存</button>
+                                    <button class="btn btn-primary">取消</button>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="perIntro">
+                                <div class="perHeader clearfix">
+                                    <div class="masterImg b-fl">
+                                        <img src="static/dist/img/userImg.png" alt="" class="b-fl">
+                                    </div>
+                                    <div class="masterName">
+                                        <span>LV.1</span>
+                                        A-Hui
+                                    </div>
+                                    <a class="masterImgEdit" href="javascript:;"><i class="glyphicon glyphicon-pencil"></i>修改头像</a>
+                                </div>
+                                <!--·-->
+                                <div class="modalFormFooter">
+                                    <button class="btn btn-primary">保存</button>
+                                    <button class="btn btn-primary">取消</button>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="papersUpload">证件上传</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

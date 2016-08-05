@@ -42,7 +42,8 @@ require(['avalon','util','tree'], function (avalon) {
     searchShow:false,
     operationShow:false,
     proNav:0,
-    orderNav:0
+    orderNav:0,
+
   });
   require(['router'],function(){
     avalon.scan();
