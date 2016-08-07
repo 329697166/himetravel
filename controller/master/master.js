@@ -1,10 +1,29 @@
 define(['table','zh-CN','ui','datapicker','zh-CN2'],function(){
     var master = avalon.define({
         $id: "master",
+        papList:[
+            {type:"idCard",typeName:"身份证"},
+            {type:"passport",typeName:"护照"},
+            {type:"studentIdCard",typeName:"留学生证"},
+            {type:"guideCertificate",typeName:"当地导游证"},
+            {type:"drivingLicence",typeName:"驾驶证"}
+        ],
+        addPapers:function (){
+            //var list = {papName:''};
+            //master.papList.push(list);
+        },
+        papersImg:['static/dist/img/paperImg.png'],
+        addPapersImg:function (){
+            var url = '';
+            master.papersImg.push(url);
+        },
         getTable: function (url) {
             window.operationEvents = {
                 'click .j-examine': function (e, value, row, index) {
                     $("#examineModal").modal("toggle");
+                },
+                'click .j-edit': function (e, value, row, index) {
+                    $("#editModal").modal("toggle");
                 }
             };
             var $table = $(".table");
@@ -46,7 +65,7 @@ define(['table','zh-CN','ui','datapicker','zh-CN2'],function(){
             function operationFormatter(value, row, index) {
                 return [
                     '<a class="b-mr5 j-examine" href="javascript:;">审核</a>',
-                    '<a class="b-mr5" href="javascript:;">编辑</a>',
+                    '<a class="b-mr5 j-edit" href="javascript:;">编辑</a>',
                     '<a class="b-mr5" href="javascript:;">删除</a>'
                 ].join('');
             }
@@ -57,7 +76,7 @@ define(['table','zh-CN','ui','datapicker','zh-CN2'],function(){
     return avalon.controller(function ($ctrl) {
         // 进入视图 first
         $ctrl.$onEnter = function () {
-            $(".nav a").eq(2).addClass("active").siblings().removeClass("active");
+            $("#nav a").eq(5).addClass("active").siblings().removeClass("active");
         }
         // 视图渲染后，意思是avalon.scan完成 second
         $ctrl.$onRendered = function () {

@@ -3,6 +3,15 @@
  */
 define(['mmState','util'],function(){
   /* router 跳转 */
+	avalon.state('index', {
+		url: '/index',
+		views: {
+			'contain': {
+				templateUrl: 'tpl/index.html',
+				controllerUrl: 'controller/index'
+			}
+		}
+	})
 	avalon.state('airportTransfer', {
 		url: '/airportTransfer',
 		views: {

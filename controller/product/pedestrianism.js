@@ -1,4 +1,4 @@
-define(['ui','datapicker','zh-CN2'],function(){
+define(['table','zh-CN','ui','datapicker','zh-CN2'],function(){
     var pedestrianism = avalon.define({
         $id: "pedestrianism",
         proNav:"tpl/product/proNav/proNav.html",
@@ -51,19 +51,60 @@ define(['ui','datapicker','zh-CN2'],function(){
                 pedestrianism.statusShow=false;
             })
         },
-        tableData:[
-            //模拟表格数据
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已上架",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已上架",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"未上架",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"未上架",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"未上架",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"热点",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"热点",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"热点",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已删除",editTime:"2016-06-26 09:10"},
-            {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已删除",editTime:"2016-06-26 09:10"},
-        ],
+        getTable: function (url) {
+            window.operationEvents = {
+                'click .j-examine': function (e, value, row, index) {
+
+                },
+                'click .j-edit': function (e, value, row, index) {
+
+                }
+            };
+            var $table = $(".table");
+            var data = [
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已上架",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已上架",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"未上架",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"未上架",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"未上架",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"热点",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"热点",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"热点",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已删除",editTime:"2016-06-26 09:10"},
+                {proName:'【徒步陪游】旭川机场至星野 度假村单程接/送机',MasterName:"大宝宝-Jally",time:'2016-06-26 09:00',status:"已删除",editTime:"2016-06-26 09:10"}
+            ]
+            $table.bootstrapTable({
+                data:data,
+                columns: [
+                    {checkbox: true},
+                    {field: 'proName',title:'产品名',width:200,formatter:proNameFormatter},
+                    {field: 'MasterName',title:'达人'},
+                    {field: 'time',title:'创建时间'},
+                    {field: 'status',title:'状态'},
+                    {field: 'editTime',title:'修改时间'},
+                    {field: 'operation',title: '操作',events: window.operationEvents,formatter: operationFormatter}
+                ],
+                pagination: true,//开启翻页
+                pageSize: 10,//表格初始行数
+                pageList: [5,10,20],//表格行数选择
+            });
+            function proNameFormatter(value, row, index) {
+                return [
+                    '<a href="javascript:;">'+row.proName+'</a>',
+                ].join('');
+            }
+            function operationFormatter(value, row, index) {
+                return [
+                    '<a class="b-mr5" href="javascript:;">热点</a>',
+                    '<a class="b-mr5" href="javascript:;">上架</a>',
+                    '<a class="b-mr5" href="javascript:;">下架</a>',
+                    '<a class="b-mr5" href="javascript:;">编辑</a>',
+                    '<a class="b-mr5" href="javascript:;">删除</a>'
+                ].join('');
+            }
+
+
+        },
         status:["全部产品","已上架","未上架","已删除","热点"],
         statusChange:function (e){
             e.stopPropagation()
@@ -94,7 +135,7 @@ define(['ui','datapicker','zh-CN2'],function(){
     return avalon.controller(function ($ctrl) {
         // 进入视图 first
         $ctrl.$onEnter = function () {
-            $(".nav a").eq(1).addClass("active").siblings().removeClass("active");
+            $("#nav a").eq(1).addClass("active").siblings().removeClass("active");
         }
         // 视图渲染后，意思是avalon.scan完成 second
         $ctrl.$onRendered = function () {
@@ -107,6 +148,7 @@ define(['ui','datapicker','zh-CN2'],function(){
             $(".j-status").click(function (){
                 alert("aaa");
             })
+            pedestrianism.getTable();
         }
         // 对应的视图销毁前，就是离开当前页面时的操作
         $ctrl.$onBeforeUnload = function () {

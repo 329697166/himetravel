@@ -17,9 +17,11 @@ html,body{font-size: 16px;}
 .b-mr5{margin: 0 5px 0 0;}
 .b-mr10{margin: 0 10px 0 0;}
 .b-p0{padding: 0;}
+.b-p10{padding: 10px;}
 .b-p20{padding: 20px;}
 .b-ptb10{padding: 10px 0;}
 .b-ptb20{padding: 20px 0;}
+.b-plr15{padding: 0 15px;}
 .b-plr20{padding: 0 20px;}
 .b-plr20-2{padding-left: 20px;padding-right: 20px;}
 .b-pl10{padding: 0 0 0 10px;}
@@ -31,7 +33,9 @@ html,body{font-size: 16px;}
 .b-por{position: relative;}
 .b-poa{position: absolute;}
 .b-ib{display: inline-block;}
+.b-lh30{line-height: 30px;}
 .b-lh34{line-height: 34px;}
+.b-lh65{line-height: 65px;}
 .b-c666{
   color: #666666;
 }
@@ -49,7 +53,7 @@ html,body{font-size: 16px;}
   vertical-align: middle;
   margin-right: 8px;
 }
-.b-icon-aircraft i,.b-icon-car i,.b-icon-carpool i,.b-icon-pedestrianism i,.b-icon-pedestrianism i,.b-icon-map i{
+.b-icon-aircraft i,.b-icon-car i,.b-icon-carpool i,.b-icon-pedestrianism i,.b-icon-climbing i,.b-icon-map i{
   background: url('../img/icon.png') no-repeat;
   height: 22px;
 }
@@ -81,7 +85,7 @@ html,body{font-size: 16px;}
 .b-icon-pedestrianism.active i,.b-icon-pedestrianism:hover i{
   background-position: -77px -22px;
 }
-.b-icon-pedestrianism i{
+.b-icon-climbing i{
   width: 18px;
   background-position: -94px 0;
 }

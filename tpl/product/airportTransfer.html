@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="static/dist/bootstrap/table/bootstrap-table.css">
 <link rel="stylesheet" href="static/dist/bootstrap/datatimepicker/css/bootstrap-datetimepicker.min.css"/>
 <div class="clearfix" ms-controller="airportTransfer">
     <div class="pro-option clearfix">
@@ -5,32 +6,7 @@
         <button type="button" class="btn btn-primary" ms-on-click="addFun">新增产品</button>
     </div>
     <div class="b-plr20 b-mt10 has-feedback">
-        <table class="table">
-            <tr>
-                <th class="text-center"><input type="checkbox" ms-on-change="allChecked"></th>
-                <th>产品名</th>
-                <th>达人姓名</th>
-                <th>创建时间</th>
-                <th>修改时间</th>
-                <th width="65" ms-on-click="showStatusSelect">状态&nbsp;<i class="glyphicon glyphicon-chevron-down"></i></th>
-                <th>操作</th>
-            </tr>
-            <tr ms-repeat="tableData">
-                <td class="text-center"><input class="checkObj" type="checkbox"></td>
-                <td><a href="javascript:;">{{el.proName}}</a></td>
-                <td>{{el.MasterName}}</td>
-                <td>{{el.time}}</td>
-                <td>{{el.editTime}}</td>
-                <td>{{el.status}}</td>
-                <td>
-                    <a class="j-test tab-operation" href="javascript:;">热点</a>
-                    <a class="j-test tab-operation" href="javascript:;">上架</a>
-                    <a class="j-test tab-operation" href="javascript:;">下架</a>
-                    <a class="j-test tab-operation" href="javascript:;">编辑</a>
-                    <a class="j-test tab-operation" href="javascript:;">删除</a>
-                </td>
-            </tr>
-        </table>
+        <table id="bTable" class="table"></table>
         <ul class="statusSelect" ms-visible="statusShow">
             <li ms-repeat="status" ms-on-click="statusChange">
                 <i ms-if="$index==0" class="glyphicon glyphicon-ok b-reg"></i>
@@ -38,14 +14,6 @@
                 {{el}}
             </li>
         </ul>
-        <div class="pagination">
-            <a href="javascript:;">上一页</a>
-            <a class="active" href="javascript:;">1</a>
-            <a href="javascript:;">2</a>
-            <a href="javascript:;">3</a>
-            <a href="javascript:;">4...10</a>
-            <a href="javascript:;">下一页</a>
-        </div>
     </div>
     <div class="modal fade" id="airportModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -67,15 +35,15 @@
                         <div class="modalForm clearfix">
                             <h4 class="modalFormTitle"><p>服务内容</p></h4>
                             <div class="col-md-12 b-p20">
-                                <div class="col-md-6">
+                                <div class="col-md-6 b-p0">
                                     <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;接送点</label>
                                     <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：白云机场"></div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 b-p0">
                                     <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;目的地</label>
                                     <div class="col-md-8"><input class="form-control" type="text" placeholder="例如：广州市内"></div>
                                 </div>
-                                <div class="col-md-10 b-mt20">
+                                <div class="col-md-10 b-p0 b-mt20">
                                     <label class="modalFormLabel"><i class="b-reg glyphicon glyphicon-asterisk"></i>&nbsp;服务时间</label>
                                     <div class="col-md-4"><input size="16" type="text" class="form_datetime form-control" placeholder="2016-01-01 00:00:00" ms-on-click="datetimeFun"></div>
                                     <span class="modalFormTimeTo">至</span>
@@ -183,38 +151,30 @@
                             </div>
                             <div class="col-md-12 b-mt20">
                                 <label class="modalFormLabel b-fwb">费用包含</label>
-                                <textarea class="form-control b-resize" rows="5">
-
-                                </textarea>
+                                <textarea class="form-control b-resize" rows="5"></textarea>
                             </div>
                             <div class="col-md-12 b-mt20">
                                 <label class="modalFormLabel b-fwb">费用不包含</label>
-                                <textarea class="form-control b-resize" rows="5">
-
-                                </textarea>
+                                <textarea class="form-control b-resize" rows="5"></textarea>
                             </div>
+                        </div>
+                        <div class="modalFormFooter">
+                            <button class="btn btn-primary" ms-on-click="navPrev()">上一步</button>
+                            <button class="btn btn-primary" ms-on-click="navNext()">下一步</button>
                         </div>
                     </div>
                     <div class="airportIntro clearfix" ms-visible="navIndex==3">
                         <img src="static/dist/img/uploadBg.png" alt="">
                         <ul class="scenicSpot">
-                            <li>
+                            <li ms-repeat="scenicSpotList">
                                 <i class="building"></i>
-                                <input placeholder="请输入景点、餐馆等" />
+                                <input type="text" placeholder="请输入景点、餐馆等" value="el.scenicSpotName" ms-duplex="el.scenicSpotName" />
                             </li>
-                            <li>
-                                <i class="building"></i>
-                                <input placeholder="请输入景点、餐馆等" />
-                            </li>
-                            <li>
-                                <i class="building"></i>
-                                <input placeholder="请输入景点、餐馆等" />
+                            <li class="addScenicSpot" ms-on-click="addScenicSpot">
+                                <i class="glyphicon glyphicon-plus-sign"></i>
+                                <p></p>
                             </li>
                        </ul>
-                        <div class="addScenicSpot" ms-on-click="addScenicSpot">
-                            <i class="glyphicon glyphicon-plus-sign"></i>
-                            <p></p>
-                        </div>
                         <div class="modalFormFooter">
                             <button class="btn btn-primary" ms-on-click="navPrev()">上一步</button>
                             <button class="btn btn-primary" ms-on-click="navNext()">下一步</button>

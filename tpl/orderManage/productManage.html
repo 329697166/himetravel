@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="static/dist/bootstrap/table/bootstrap-table.css">
 <div class="productManage" ms-controller="productManage">
     <div class="order-option clearfix">
         <div ms-include-src="orderNav"></div>
@@ -19,36 +20,7 @@
         </div>
     </div>
     <div class="b-plr20 b-mt10 has-feedback">
-        <table class="table">
-            <tr>
-                <th class="text-center"><input type="checkbox" ms-on-change="allChecked"></th>
-                <th>订单号</th>
-                <th>产品名</th>
-                <th>下单时间</th>
-                <th>达人</th>
-                <th>操作</th>
-            </tr>
-            <tr ms-repeat="tableData">
-                <td class="text-center"><input class="checkObj" type="checkbox"></td>
-                <td><a href="javascript:;" ms-on-click="orderInfoShow">{{el.orderId}}</a></td>
-                <td>{{el.proName}}</td>
-                <td>{{el.time}}</td>
-                <td>{{el.MasterName}}</td>
-                <td>
-                    <a class="j-test tab-operation" href="javascript:;">不通过</a>
-                    <a class="j-test tab-operation" href="javascript:;">通过</a>
-                    <a class="j-test tab-operation" href="javascript:;">删除</a>
-                </td>
-            </tr>
-        </table>
-        <div class="pagination">
-            <a href="javascript:;">上一页</a>
-            <a class="active" href="javascript:;">1</a>
-            <a href="javascript:;">2</a>
-            <a href="javascript:;">3</a>
-            <a href="javascript:;">4...10</a>
-            <a href="javascript:;">下一页</a>
-        </div>
+        <table id="bTable" class="table"></table>
     </div>
     <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
